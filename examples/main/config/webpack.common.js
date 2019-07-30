@@ -23,10 +23,10 @@ module.exports = env => ({
     extensions: ['.js', '.jsx', '.json'],
     symlinks: false,
     alias: {
-      'draft-js': path.resolve(PATHS.monorepo_root, 'node_modules', '@wix', 'draft-js'),
-      'react-hot-loader': path.resolve(PATHS.monorepo_root, 'node_modules', 'react-hot-loader'),
-      '@wix/draft-js': path.resolve(PATHS.monorepo_root, 'node_modules', '@wix', 'draft-js'),
-      'wix-rich-content-common': path.resolve(PATHS.monorepo_root, 'packages', 'common', 'web'),
+      'react-hot-loader': path.resolve(
+        path.join(__dirname, '..', 'node_modules', 'react-hot-loader')
+      ),
+      'wix-rich-content-common': path.resolve(__dirname, '..', '..', '..', 'packages', 'common'),
     },
   },
   module: {

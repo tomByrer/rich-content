@@ -1,7 +1,12 @@
+<<<<<<< HEAD:packages/editor/web/src/RichContentEditor/handleKeyCommand.js
 import { EditorState, RichUtils, Modifier } from '@wix/draft-js';
 import { COMMANDS } from 'wix-rich-content-common';
 import handleBackspaceCommand from './handleBackspaceCommand';
 import handleDeleteCommand from './handleDeleteCommand';
+=======
+import { EditorState, RichUtils, Modifier } from 'draft-js';
+import { isAtomicBlockFocused, removeBlock, COMMANDS } from 'wix-rich-content-common';
+>>>>>>> [*] update(draft-js): 0.10.2 -> 0.11.0:packages/editor/src/RichContentEditor/handleKeyCommand.js
 
 export default (updateEditorState, customHandlers) => (command, editorState) => {
   let newState, contentState;

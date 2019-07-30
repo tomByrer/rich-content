@@ -32,10 +32,14 @@
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+<<<<<<< HEAD:packages/editor/web/package.json
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
       "^draft-js$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js",
       "^draft-js/.*$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js",
       "^@wix/draft-js$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js"
+=======
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+>>>>>>> [*] update(draft-js): 0.10.2 -> 0.11.0:packages/editor/package.json
     }
   },
   "dependencies": {
@@ -52,13 +56,14 @@
   "peerDependencies": {
     "@babel/runtime": "7.2.0",
     "classnames": "^2.0.0",
+    "draft-js": "0.11.0",
     "lodash": "^4.0.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
     "@babel/runtime": "7.2.0",
-    "@wix/draft-js": "0.10.272",
+    "draft-js": "0.11.0",
     "babel-jest": "^23.6.0",
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",

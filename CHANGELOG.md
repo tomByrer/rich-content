@@ -8,6 +8,9 @@
 > - :house: [Internal]
 
 ## [Unreleased]
+### :house: Internal
+- `general`
+  - [#347](https://github.com/wix-incubator/rich-content/pull/347) draft-js version updated to 0.11.0
 <hr/>
 
 ## 5.0.0 "Mamtak" (Sep 2, 2019)
