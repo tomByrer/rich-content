@@ -77,14 +77,7 @@
     },
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
-<<<<<<< HEAD:packages/common/web/package.json
-      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js",
-      "^draft-js$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js",
-      "^draft-js/.*$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js",
-      "^@wix/draft-js$": "<rootDir>/../../../node_modules/@wix/draft-js/dist/Draft.min.js"
-=======
       "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
->>>>>>> [*] update(draft-js): 0.10.2 -> 0.11.0:packages/common/package.json
     }
   }
 }
