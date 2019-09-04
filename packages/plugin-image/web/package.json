@@ -53,7 +53,8 @@
   },
   "dependencies": {
     "image-client-api": "1.2218.0",
-    "wix-rich-content-common": "5.0.0"
+    "wix-rich-content-common": "5.0.0",
+    "@wix/media-image-studio-opener": "^3.27.0"
   },
   "unpkg": true,
   "publishConfig": {
