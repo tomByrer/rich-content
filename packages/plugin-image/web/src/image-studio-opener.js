@@ -32,6 +32,7 @@ function loadImageStudioOpenerPackage(onLoad = () => {}) {
     return;
   }
 
+  isLoading = true;
   loadScript(IMAGE_STUDIO_OPENER_SRC, loadGlobalHandler);
 }
 
