@@ -22,6 +22,7 @@ export default ({ t, anchorTarget, relValue, uiSettings, isMobile, settings }) =
       modalName: Modals.IMAGE_EDITOR,
       modalStyles: imageEditorStyles,
       t,
+      settings,
       mobile: false,
       tooltipTextKey: 'ImageEditorButton_Tooltip',
     },
