@@ -1,6 +1,6 @@
 import { BUTTONS, PluginSettingsIcon, getModalStyles } from 'wix-rich-content-common';
 import { Modals } from '../modals';
-import { MediaReplaceIcon } from '../icons';
+import { MediaReplaceIcon, ImageEditor } from '../icons';
 
 export default ({ t, anchorTarget, relValue, uiSettings, isMobile, settings }) => {
   const modalStyles = getModalStyles({ isMobile });
@@ -18,11 +18,10 @@ export default ({ t, anchorTarget, relValue, uiSettings, isMobile, settings }) =
     {
       keyName: 'imageEditor',
       type: BUTTONS.EXTERNAL_MODAL,
-      icon: PluginSettingsIcon,
+      icon: ImageEditor,
       modalName: Modals.IMAGE_EDITOR,
       modalStyles: imageEditorStyles,
       t,
-      settings,
       mobile: false,
       tooltipTextKey: 'ImageEditorButton_Tooltip',
     },
