@@ -51,7 +51,7 @@ class ImageEditor extends Component {
       <ImageEditorLogic
         mediaImageStudio={mediaImageStudio}
         mediaImageStudioEvents={mediaImageStudioEvents}
-        fileId={src.file_name}
+        fileName={src.file_name}
         helpers={helpers}
         pubsub={pubsub}
       />
