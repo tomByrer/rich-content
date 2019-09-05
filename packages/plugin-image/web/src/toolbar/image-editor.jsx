@@ -26,7 +26,8 @@ class ImageEditor extends Component {
   }
 
   createMediaImageStudio = (MediaImageStudio) => {
-    const { settings: { siteToken, metasiteId, initiator, mediaRoot } } = this.props;
+    const { settings: { imageEditorWixSettings } } = this.props;
+    const { siteToken, metasiteId, initiator, mediaRoot } = imageEditorWixSettings;
 
     const mediaImageStudio = new MediaImageStudio({
       siteToken,
