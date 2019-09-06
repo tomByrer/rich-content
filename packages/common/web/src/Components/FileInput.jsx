@@ -21,17 +21,12 @@ class FileInput extends Component {
     this.setState({ focused: false });
   }
 
+  handleChange = e => {
+    this.props.onChange(Array.from(e.target.files));
+  };
+
   renderInput() {
-    const {
-      onChange,
-      accept,
-      multiple,
-      className,
-      title,
-      children,
-      dataHook,
-      tabIndex,
-    } = this.props;
+    const { accept, multiple, className, title, children, dataHook, tabIndex } = this.props;
     const hasMultiple = multiple ? { multiple } : {};
     const { styles } = this;
     const a11yProps = {
@@ -52,7 +47,7 @@ class FileInput extends Component {
           id={this.id}
           type={'file'}
           data-hook={dataHook}
-          onChange={onChange}
+          onChange={this.handleChange}
           onClick={() => this.value === null}
           accept={accept}
           onFocus={() => this.onFocus()}
