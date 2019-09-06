@@ -6,6 +6,7 @@ function loadScript(src, onLoad) {
   document.head.appendChild(script);
 }
 
+// eslint-disable-next-line max-len,prettier/prettier
 const IMAGE_STUDIO_OPENER_SRC = 'https://static.parastorage.com/unpkg/@wix/media-image-studio-opener@3.27.0/dist/statics/MediaImageStudio.bundle.min.js';
 let isLoading;
 let loadHandlers = [];
@@ -36,6 +37,4 @@ function loadImageStudioOpenerPackage(onLoad = () => {}) {
   loadScript(IMAGE_STUDIO_OPENER_SRC, loadGlobalHandler);
 }
 
-export {
-  loadImageStudioOpenerPackage
-}
+export { loadImageStudioOpenerPackage };

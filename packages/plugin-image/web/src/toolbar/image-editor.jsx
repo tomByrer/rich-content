@@ -9,7 +9,7 @@ class ImageEditor extends Component {
 
     this.state = {
       mediaImageStudio: undefined,
-      mediaImageStudioEvents: undefined
+      mediaImageStudioEvents: undefined,
     };
 
     // This is script loading warmup
@@ -20,13 +20,15 @@ class ImageEditor extends Component {
     loadImageStudioOpenerPackage(pkg => {
       this.setState({
         mediaImageStudio: this.createMediaImageStudio(pkg.MediaImageStudio),
-        mediaImageStudioEvents: pkg.MediaImageStudioEvents
+        mediaImageStudioEvents: pkg.MediaImageStudioEvents,
       });
     });
   }
 
-  createMediaImageStudio = (MediaImageStudio) => {
-    const { settings: { imageEditorWixSettings } } = this.props;
+  createMediaImageStudio = MediaImageStudio => {
+    const {
+      settings: { imageEditorWixSettings },
+    } = this.props;
     const { siteToken, metasiteId, initiator, mediaRoot } = imageEditorWixSettings;
 
     const mediaImageStudio = new MediaImageStudio({
@@ -41,7 +43,11 @@ class ImageEditor extends Component {
 
   render() {
     const { mediaImageStudio, mediaImageStudioEvents } = this.state;
-    const { componentData: { src }, helpers, pubsub } = this.props;
+    const {
+      componentData: { src },
+      helpers,
+      pubsub,
+    } = this.props;
 
     if (!mediaImageStudio || !src || !mediaImageStudioEvents) {
       return null;
@@ -62,7 +68,7 @@ ImageEditor.propTypes = {
   settings: PropTypes.object.isRequired,
   componentData: PropTypes.any.isRequired,
   helpers: PropTypes.object,
-  pubsub: PropTypes.any
+  pubsub: PropTypes.any,
 };
 
 export default ImageEditor;

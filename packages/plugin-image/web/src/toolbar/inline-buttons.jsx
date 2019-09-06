@@ -7,18 +7,20 @@ const removeEmpty = list => list.filter(item => !!item);
 export default ({ t, anchorTarget, relValue, uiSettings, isMobile, settings }) => {
   const modalStyles = getModalStyles({ isMobile });
   const imageEditorStyles = getModalStyles({ customStyles: { overlay: { visibility: 'hidden' } } });
-  const imageEditorButton = settings && settings.imageEditorWixSettings ? {
-    keyName: 'imageEditor',
-    type: BUTTONS.EXTERNAL_MODAL,
-    icon: ImageEditor,
-    modalName: Modals.IMAGE_EDITOR,
-    modalStyles: imageEditorStyles,
-    t,
-    settings,
-    mobile: false,
-    tooltipTextKey: 'ImageEditorButton_Tooltip',
-  } : null;
-
+  const imageEditorButton =
+    settings && settings.imageEditorWixSettings
+      ? {
+          keyName: 'imageEditor',
+          type: BUTTONS.EXTERNAL_MODAL,
+          icon: ImageEditor,
+          modalName: Modals.IMAGE_EDITOR,
+          modalStyles: imageEditorStyles,
+          t,
+          settings,
+          mobile: false,
+          tooltipTextKey: 'ImageEditorButton_Tooltip',
+        }
+      : null;
 
   const buttons = [
     { keyName: 'sizeOriginal', type: BUTTONS.SIZE_ORIGINAL, mobile: false },
